@@ -12,7 +12,7 @@ h1, button{
 h1{
 	font-size: 75px;
 	margin-top: 0px;
-	text-shadow: 2px 2px 2px white;
+	text-shadow: 2px 2px 2px #0cffe1, -2px -2px 2px #ff21409e;
 	display: inline-block;
 	display: -webkit-inline-box;
 	position: absolute;

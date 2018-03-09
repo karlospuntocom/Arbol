@@ -1,32 +1,43 @@
 var estrellas = 0;
+var ids = 0;
 
 function add_star(){
 	if(estrellas>0){
 		var x = prompt("¿Cuál es el número de estrella padre?");
-		var hijo = document.createElement('ul');
-
-		hijo.id = estrellas;
-		var contenido = document.createTextNode(estrellas+"✶");
-		hijo.appendChild(contenido);
-		document.getElementById(x).appendChild(hijo);
-		estrellas = estrellas + 1;
+		if (document.getElementById(x)) {
+			var hijo = document.createElement('ul');
+			hijo.id = ids;
+			var contenido = document.createTextNode(ids+"✶");
+			hijo.appendChild(contenido);
+			document.getElementById(x).appendChild(hijo);
+			estrellas = estrellas + 1;
+			ids = ids + 1;
+		} else {
+			alert("La estrella no existe.");
+		}		
 	} else {
 		var hijo = document.createElement('ul');
-		hijo.id = estrellas;
-		var contenido = document.createTextNode(estrellas+"✶");
+		hijo.id = ids;
+		var contenido = document.createTextNode(ids+"✶");
 		hijo.appendChild(contenido);
 		document.getElementById('game').appendChild(hijo);
 		estrellas = estrellas + 1;
+		ids = ids + 1;
 	}
 }
 
 function del_star(){
 	if(estrellas>0){
 		var x = prompt("¿Cuál es el número de la estrella a borrar?");
-		var hijo = document.getElementById(x);
-		var padre = hijo.parentNode;
-		padre.removeChild(hijo);
-		estrellas = count_star();
+		if (document.getElementById(x)) {
+			var hijo = document.getElementById(x);
+			var padre = hijo.parentNode;
+			padre.removeChild(hijo);
+			estrellas = count_star();
+		} else {
+			alert("La estrella no existe.");
+		}
+		
 	} else {
 		alert("No se puede borrar.");
 	}
