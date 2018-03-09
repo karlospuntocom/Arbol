@@ -49,36 +49,13 @@ input{
 	box-shadow: 2px 2px 2px black;
 }
 
-input:disabled{
-	color: #000000e0;
-	text-shadow: 2px 2px 2px white;
-}
-
 ul{
-	padding-left: 25%;
-	padding-right: 25%;
-	margin-top: 5%;
-	list-style: none;
-}
-
-li{
-	width: 1px;
-	height: 1px;
 	background: transparent;
 	font-size: 50px;
 	text-shadow: 0px 0px 14px #ffffff;
     color: wheat;
-}
-
-    
-li:after{
-	content: " ";
-	position: absolute;
-	top: 2000px;
-	width: 1px;
-	height: 1px;
-	background: transparent;
-	box-shadow: $shadows-small;
+    display: block;
+    margin-left: 25%;
 }
     
 .container{
@@ -90,7 +67,7 @@ li:after{
 	position: absolute;
 	width: 100%;
 	display: block;
-	height: 1000px;
+	height: 100%;
 	background: url("../images/fondoAlert.png") repeat;
 	text-align:center;
 	opacity:0;
@@ -100,6 +77,7 @@ li:after{
 }
 
 .dgcAlert .dgcVentana{
+	top: 25%;
 	width: 500px;
 	background: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 255, 255) 60%);
 	min-height: 150px;
@@ -124,11 +102,17 @@ li:after{
 	width: 400px;
 	/*font-size: 20px;*/
 	font-family: 'Orbitron', sans-serif;
-	color: #0FF; 
-	text-shadow: 0 0 20px #0033CC;
+	color: #ff217c; 
+	text-shadow: 0 0 20px #00fff3;
 	text-decoration:none;
-	font-size: 3.5em;
+	font-size: 30px;
 	font-weight: 900;
+}
+.dgcAlert .dgcVentana .dgcInput {
+	font-size: 40px;
+    width: 75px;
+    height: 75px;
+    font-weight: normal;
 }
 .dgcAlert .dgcVentana .dgcAceptar{
 	font-size: 22px;
